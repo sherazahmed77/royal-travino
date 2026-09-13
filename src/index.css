@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* Royal Travino — Luxury palette */
+  --color-ink: #0a0a0a;
+  --color-coal: #0e0d0b;
+  --color-char: #14120e;
+  --color-line: rgba(201, 164, 92, 0.16);
+  --color-gold: #c9a45c;
+  --color-gold-soft: #e2c98f;
+  --color-gold-deep: #8f7440;
+  --color-ivory: #f4efe6;
+  --color-sand: #a79e8f;
+
+  --font-display: "Marcellus", "Times New Roman", serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 46s linear infinite;
+  --animate-pulse-soft: pulse-soft 2.6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 0.35;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(6px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply overflow-x-hidden bg-ink font-sans text-ivory antialiased;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background: #c9a45c;
+    color: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2b271e;
+    border: 2px solid #0a0a0a;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8f7440;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility text-gold-grad {
+  background: linear-gradient(105deg, #e2c98f 0%, #c9a45c 45%, #a5854a 80%, #e2c98f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gold-frame {
+  box-shadow:
+    inset 0 0 0 1px rgba(201, 164, 92, 0.25),
+    0 30px 80px -30px rgba(0, 0, 0, 0.8);
+}
+
+@utility dark-map {
+  filter: grayscale(1) invert(0.92) contrast(0.9) brightness(0.9);
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#0A0A0A"/>
+  <rect x="3" y="3" width="58" height="58" rx="8" fill="none" stroke="#C9A45C" stroke-width="1.5" opacity="0.5"/>
+  <rect x="6" y="6" width="52" height="52" rx="6" fill="none" stroke="#C9A45C" stroke-width="0.75" opacity="0.25"/>
+  <!-- Crown motif -->
+  <path d="M22 22 L26 27 L32 19 L38 27 L42 22 L41 29 L23 29 Z" fill="#C9A45C" opacity="0.85"/>
+  <!-- RT monogram -->
+  <text x="32" y="47" font-family="'Marcellus', 'Cormorant Garamond', 'Georgia', serif" font-size="19" font-weight="700" fill="#C9A45C" text-anchor="middle" letter-spacing="1">RT</text>
+</svg>
